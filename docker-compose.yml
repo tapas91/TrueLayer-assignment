@@ -1,0 +1,14 @@
+version: '2.4'
+services:
+    app:
+      build: .
+      depends_on:
+        - postgres
+      entrypoint: /usr/local/app
+
+    postgres:
+        image: postgres
+        ports:
+            - 5432:5432
+        env_file:
+            - postgres.env
