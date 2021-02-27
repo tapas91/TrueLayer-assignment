@@ -32,3 +32,11 @@ Task1 is for Data Extraction where I've extracted the required fields from the g
 Task2 is for Data Transformation, joining the data and uploading it to Postgres DB.
 
 Due to short of time, I have hardcoded few of the values in the callable functions, instead I could have passed them dynamically in the Dag.
+
+## Testing
+When doing data transformatin in pandas dataframe I checked for data consistencies each time I implement a join, filter, drop etc.
+Dataframe provides us with a tabular representatioin of data which helps in finding any anomalies.
+
+## Performance
+Initially I found performance issues while parsing XML file but later figured out the parsing method for compressed XML file(gz file), and I managed to make it efficient by using Element Tree and filtered only required fields.
+
